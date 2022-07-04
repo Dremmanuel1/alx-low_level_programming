@@ -1,6 +1,5 @@
 #include <time.h>
 #include <stdio.h>
-
 /** 
  * *main -> assign a random number to the variable n when executed
  * *based on a condition
