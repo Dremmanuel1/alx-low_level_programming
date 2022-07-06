@@ -1,24 +1,25 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- *  * print_times_table - prints time table
- *   * @n : times table to use
- *    * Description: prints the times table
- *     * Return:void
- */
-
-void print_times_table(int n)
+ *  * print_to_98 - prints to 98
+ *   * @n : number to start from
+ *    * Return:0 or 1
+ *     */
+void print_to_98(int n)
 {
+		while (n < 98)
+				{
+							printf("%i, ", n);
+									n++;
+										}
 
-	int a = 0, rep, b;
-
-	if (n < 0 || n > 15)
-			return;
-
-	while (a <= n)
-	{
-			for (b = 0; b <= n; b++)
+			while (n > 98)
 					{
-								rep = a * b;
-					}
+								printf("%i, ", n);
+										n--;
+											}
+				printf("98");
+					putchar('\n');
+}
 
