@@ -1,33 +1,72 @@
-#include "holberton.h"
+#include "main.h"
+
+#include <stdio.h>
+
+int sizeit(char *a);
 
 /**
- * * rev_string - Reverses a string
- * * @s: The string to be modified
+ * * rev_string - reverses a string
  * *
- * * Return: void
+ * * @s: The String to reverse
+ * *
+ * * Return: reversed string
+ * *
  */
+
 void rev_string(char *s)
+
 {
-	int i, c, k;
-	char *a, aux;
+	int length = sizeit(s);
 
-	a = s;
+	char string[500];
 
-	while (s[c] != '\0')
+	int str_point, end_point, tmp_arr;
+
+	str_point = 0;
+
+	tmp_arr = 0;
+
+	end_point = length - 1;
+
+	for (end_point = end_point; end_point >= str_point; end_point--)
+
 	{
-		c++;
+		string[tmp_arr] = s[end_point];
+
+		tmp_arr++;
+
 	}
 
-	for (k = 1; k < c; k++)
+	for (end_point = 0; end_point < length; end_point++)
+
 	{
-		a++;
+
+		s[end_point] = string[end_point];
+
+	}
+}
+
+/**
+ *  * sizeit - count the lenght of a string pointer
+ *   *
+ *    * @a: the string to pass
+ *     *
+ *      * Return: integer
+ */
+
+int sizeit(char *a)
+
+{
+
+	int length = 0;
+
+	while (*(a + length) != '\0')
+
+	{
+
+		length++;
+
 	}
 
-	for (i = 0; i < (c / 2); i++)
-	{
-		aux = s[i];
-		s[i] = *a;
-		*a = aux;
-		a--;
-	}
+	return (length);
 }
